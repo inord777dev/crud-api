@@ -5,8 +5,8 @@
   "main": "src/main.ts",
   "type": "module",
   "scripts": {
-    "start:dev": "nodemon --exec ts-node --esm ./src/main.ts",
-    "start:multi": "nodemon --exec ts-node --esm ./src/main.ts --multi",
+    "start:dev": "nodemon --exec ts-node ./src/main.ts",
+    "start:multi": "nodemon --exec ts-node ./src/main.ts --multi",
     "start:prod": "tsc --project tsconfig.json && webpack && node ./dist/main.bundle.js",
     "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --detectOpenHandles"
   },

@@ -1,5 +1,6 @@
 import cluster from 'cluster';
 import { cpus } from 'os';
+// @ts-ignore
 import server from "./app.ts";
 
 const port = Number(process.env.PORT) || 3000;

@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../src/main.ts");
+const app = require("../src/app.ts");
 
 const req = request(app);
 

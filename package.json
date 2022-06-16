@@ -5,7 +5,8 @@
   "main": "src/main.ts",
   "type": "module",
   "scripts": {
-    "start:dev": "nodemon",
+    "start:dev": "nodemon --exec ts-node --esm ./src/main.ts",
+    "start:multi": "nodemon --exec ts-node --esm ./src/main.ts --multi",
     "start:prod": "tsc --project tsconfig.json && webpack && node ./dist/main.bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +22,9 @@
   "homepage": "https://github.com/inord777dev/crud-api#readme",
   "devDependencies": {
     "dotenv": "^16.0.1",
+    "jest": "^28.1.1",
     "nodemon": "^2.0.16",
+    "supertest": "^6.2.3",
     "typescript": "^4.7.3",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"

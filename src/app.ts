@@ -23,7 +23,7 @@ const headers = {
 };
 
 const writeError = (response: http.ServerResponse, statusCode: number, message: string) => {
-  response.writeHead(STATUS_NOT_FOUND, headers);
+  response.writeHead(statusCode, headers);
   response.end(JSON.stringify({ statusCode, message }));
 }
 

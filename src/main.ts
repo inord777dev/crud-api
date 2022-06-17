@@ -15,7 +15,7 @@ const startServer = () => {
 if (cluster.isPrimary) {
   if (process.argv.includes('--multi')) {
     const numCPUs = cpus().length;
-    console.log(`Cluster running at http://${hostname}:${port}/ Start ${numCPUs} workers...`);
+    console.log(`Cluster running at http://${hostname}:${port}/`, `Start ${numCPUs} workers...`);
     for (let i = 0; i < numCPUs; i++) {
       cluster.fork();
     }

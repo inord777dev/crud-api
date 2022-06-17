@@ -1,6 +1,6 @@
 # crud-api
 
-Hello!!! 
+## Hello!!! 
 
 ## Installing
 
@@ -10,10 +10,12 @@ npm install
 ## Starting
 
 You can use this application with fouth scripts:
-- **npm run start:dev** - run application in development mode
-- **npm run start:multi** - starts multiple instances of application
-- **npm run start:prod** - run application in production mode
-- **npm run test** - run tests (three scenario)
+
+- npm run start:dev - run application in development mode
+- npm run start:multi - starts multiple instances of application
+- npm run start:prod - run application in production mode
+- npm run test - run tests (three scenario)
+
 
 ## Implementation details
 

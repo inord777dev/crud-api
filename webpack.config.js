@@ -1,6 +1,9 @@
-const path = require("path");
+import path from "path";
+import { fileURLToPath } from "url";
 
-module.exports = {
+const dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default {
   entry: "./src/main.ts",
   mode: "production",
   module: {
@@ -16,8 +19,8 @@ module.exports = {
     extensions: [".ts", ".js"],
   },
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.cjs",
+    path: path.resolve(dirname, "dist"),
   },
   target: "node",
 };

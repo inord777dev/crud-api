@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/main.ts",
+  "type": "module",
   "scripts": {
     "start:dev": "nodemon --exec ts-node ./src/main.ts",
     "start:multi": "nodemon --exec ts-node ./src/main.ts --multi",
-    "start:prod": "webpack && node ./dist/bundle.js",
+    "start:prod": "webpack && node ./dist/bundle.cjs",
     "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --detectOpenHandles"
   },
   "repository": {

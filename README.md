@@ -1,12 +1,14 @@
 # crud-api
 
-***Hello!!! 
+##Hello!!! 
 
-**Installing
+##Installing
+
 npm install
 
 
-**Starting
+##Starting
+
 You can use this application with fouth scripts:
 
 npm run start:dev - run application in development mode
@@ -15,7 +17,8 @@ npm run start:prod - run application in production mode
 npm run test - run tests (three scenario)
 
 
-**Implemented endpoint api/users:
+##Implemented endpoint api/users:
+
 GET api/users is used to get all persons
 Server should answer with status code 200 and all users records
 GET api/users/${userId}

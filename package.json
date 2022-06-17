@@ -7,7 +7,7 @@
   "scripts": {
     "start:dev": "nodemon --exec ts-node ./src/main.ts",
     "start:multi": "nodemon --exec ts-node ./src/main.ts --multi",
-    "start:prod": "tsc --project tsconfig.json && webpack && node ./dist/main.bundle.js",
+    "start:prod": "tsc ./src/main.ts && webpack && node ./dist/main.bundle.js",
     "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --detectOpenHandles"
   },
   "repository": {

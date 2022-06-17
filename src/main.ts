@@ -3,8 +3,8 @@ import { cpus } from 'os';
 // @ts-ignore
 import server from "./app.ts";
 
-const port = Number(process.env.PORT) || 3000;
 const hostname = '127.0.0.1';
+const port = Number(process.env.PORT) || 3000;
 
 const startServer = () => {
   if (process.env.NODE_ENV !== 'test') {

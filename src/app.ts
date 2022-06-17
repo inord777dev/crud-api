@@ -1,13 +1,8 @@
 import 'dotenv/config';
 import * as http from 'http';
 import { randomUUID } from 'crypto';
-
-interface IUser {
-  id: string,
-  username: string,
-  age: number,
-  hobbies: string[]
-}
+// @ts-ignore
+import { IUser } from './user.ts'
 
 const users: IUser[] = [];
 
@@ -46,7 +41,7 @@ const parseUser = (body: string, response: http.ServerResponse) => {
 
   if (typeof user?.username === 'string'
     && typeof user?.age === 'number'
-    && Array.isArray(user?.hobbies) && user.hobbies.every((x) => typeof x === 'string')) {
+    && Array.isArray(user?.hobbies) && user.hobbies.every((x: string) => typeof x === 'string')) {
     return user;
   }
   else {

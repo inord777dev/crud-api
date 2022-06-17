@@ -1,6 +1,12 @@
 # crud-api
 
-**Hello!!! 
+***Hello!!! 
+
+**Installing
+npm install
+
+
+**Starting
 You can use this application with fouth scripts:
 
 npm run start:dev - run application in development mode

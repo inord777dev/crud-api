@@ -1,17 +1,23 @@
-import path from "path"
-import "dotenv/config"
-import { fileURLToPath } from "url"
+const path = require("path");
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-
-export default {
+module.exports = {
+  entry: "./src/main.ts",
   mode: "production",
-  entry: {
-    main: path.resolve(__dirname, "./dist/main.js"),
+  module: {
+    rules: [
+      {
+        test: /\.ts?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".ts", ".js"],
   },
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "[name].bundle.js",
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   target: "node",
-}
+};

@@ -4,8 +4,6 @@ import { randomUUID } from 'crypto';
 // @ts-ignore
 import { IUser } from './user.ts'
 
-const users: IUser[] = [];
-
 const STATUS_OK = 200;
 const STATUS_CREATE = 201;
 const STATUS_DELETE = 204;
@@ -13,18 +11,20 @@ const STATUS_INPUT_INVALID = 400;
 const STATUS_NOT_FOUND = 404;
 const STATUS_FAIL = 500;
 
+const users: IUser[] = [];
+
 const headers = {
   'Content-Type': 'application/json'
 };
 
-const writeError = (response: http.ServerResponse, statusCode: number, message: string) => {
-  response.writeHead(statusCode, headers);
-  response.end(JSON.stringify({ statusCode, message }));
-}
-
 const writeResult = (response: http.ServerResponse, statusCode: number, data: any) => {
   response.writeHead(statusCode, headers);
   response.end(JSON.stringify(data));
+}
+
+const writeError = (response: http.ServerResponse, statusCode: number, message: string) => {
+  response.writeHead(statusCode, headers);
+  response.end(JSON.stringify({ statusCode, message }));
 }
 
 const isUUID = (uuid: string) => {
